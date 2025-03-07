@@ -32,17 +32,14 @@ public class Deck{
     }
 
     public Card drawCard(){
-        if (cards == null)
+        if (isEmpty()){
+            return null;
 
-        
-       return new Card("","");
-    }
+        }
+        return cards.remove(0);
+}
 
-    public  boolean isEmpty(){
+    public boolean isEmpty(){
         return cards.isEmpty();
     }
-
-   
-
-
 }
